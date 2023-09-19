@@ -35,8 +35,8 @@ def main():
             print("You cannot move there.")
         else:
             loc = new_loc
-        # display_maze(maze_array, loc)
         
+    display_maze(maze_array, loc) 
     print("Congratulations! You solved the maze.")
 
 
