@@ -16,7 +16,7 @@ class Rectangle:
             self.y -= 1
 
     def move_down(self):
-        if self.y < 19 - self.height:
+        if self.y <= 19 - self.height:
             self.y += 1
 
     def move_left(self):
@@ -24,5 +24,5 @@ class Rectangle:
             self.x -= 1
 
     def move_right(self):
-        if self.x < 19 - self.width:
+        if self.x <= 19 - self.width:
             self.x += 1
