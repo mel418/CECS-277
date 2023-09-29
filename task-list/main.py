@@ -31,8 +31,9 @@ def get_time():
 def main():
     choice = 0
     tl = Tasklist()
+    print(len(tl))
     while choice != 5:
-        length = tl.__len__()
+        length = len(tl)
         print("-Tasklist-")
         print(f"Tasks to complete: {length}")
         choice = main_menu()
@@ -42,7 +43,7 @@ def main():
                 print()
             else:
                 print('Current task is:')
-                print(tl.__getitem__(0))
+                print(tl[0])
                 print()
 
         elif choice == 2:
@@ -52,7 +53,7 @@ def main():
             else:
                 print('Tasks:')
                 for i in range(length):
-                    print(tl.__getitem__(i))
+                    print(tl[i])
                 print()
 
         elif choice == 3:
@@ -61,10 +62,10 @@ def main():
                 print()
             else:
                 print('Marking current task as complete:')
-                print(tl.__getitem__(0))
+                print(tl[0])
                 tl.mark_complete()
                 print('New current task is:')
-                print(tl.__getitem__(0))
+                print(tl[0])
                 print()
 
         elif choice == 4:

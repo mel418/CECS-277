@@ -27,6 +27,7 @@ class Task:
         if (year, month, day, hour, minute, self.description.lower()) < (other_year, other_month, other_day, other_hour, other_minute, other.description.lower()):
             return True
         return False
+    
         # if year < other_year:
         #     return True
         # elif year > other_year:
@@ -52,7 +53,7 @@ class Task:
         #                 elif minute > other_minute:
         #                     return False
         #                 else:
-        #                     if self.description < other.description:
+        #                     if self.description.lower() < other.description.lower():
         #                         return True
         #                     else:
         #                         return False
