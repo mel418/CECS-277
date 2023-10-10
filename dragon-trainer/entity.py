@@ -2,7 +2,10 @@ import abc
 
 class Entity(abc.ABC):
     '''
-    Attributes: _name – entity’s name, _hp – entity’s hit points, _max_hp – entity’s starting hp.
+    Attributes:
+        _name (str): The entity's name.
+        _hp (int): The entity's hit points.
+        _max_hp (int): The entity's maximum hit points.
     '''
     def __init__(self, name, max_hp) -> None:
         self._name = name

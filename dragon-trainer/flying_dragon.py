@@ -2,6 +2,16 @@ from dragon import Dragon
 from random import randint
 
 class FlyingDragon(Dragon):
+    '''
+    Class representing a flying dragon character, inheriting from Dragon.
+
+    Attributes:
+        swoops (int): The number of swoop attacks the dragon has.
+
+    Methods:
+        __init__(self, name, max_hp, swoops): Initializes a FlyingDragon object.
+        special_attack(self, other): Represents a special swoop attack action.
+    '''
     def __init__(self, name, max_hp, swoops) -> None:
         super().__init__(name, max_hp)
         self.swoops = swoops

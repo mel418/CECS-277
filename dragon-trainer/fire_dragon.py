@@ -2,6 +2,17 @@ from dragon import Dragon
 from random import randint
 
 class FireDragon(Dragon):
+    '''
+    Class representing a fire dragon character, inheriting from Dragon.
+
+    Attributes:
+        fire_shots (int): The number of fire shots the dragon has.
+
+    Methods:
+        __init__(self, name, max_hp, f_shots): Initializes a FireDragon object.
+        special_attack(self, other): Represents a special fire attack action.
+    '''
+
     def __init__(self, name, max_hp, f_shots) -> None:
         super().__init__(name, max_hp)
         self.fire_shots = f_shots

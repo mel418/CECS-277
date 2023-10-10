@@ -43,6 +43,7 @@ def main():
 
         if hero.hp <= 0:
             print(f'{hero.name} is knocked out')
+            break
     
 
 main()
