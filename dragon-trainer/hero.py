@@ -9,12 +9,16 @@ class Hero(Entity):
         basic_attack(self, other): Represents a basic attack action.
         special_attack(self, other): Represents a special attack action.
     '''
+    def __init__(self, name, max_hp) -> None:
+        super().__init__(name, max_hp)
+        self.level = 1
+        
     def basic_attack(self, other):
-        damage = randint(1,6) + randint(1,6)
+        damage = (randint(1,6) + randint(1,6)) *self.level
         other.take_damage(damage)
         return f'{self.name} slashes the {other.name} with their sword for {damage} damage!'
     
     def special_attack(self, other):
-        damage = randint(1,12)
+        damage = randint(1,12) * self.level
         other.take_damage(damage)
         return f'{self.name} hits the {other.name} with an arrow for {damage} damage!'

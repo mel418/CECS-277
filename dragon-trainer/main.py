@@ -12,11 +12,12 @@ def main():
         Dragon('Deadly Nadder', 10),
         FireDragon('Gronckle', 15, 3),
         FlyingDragon('Timberjack', 20, 5),
+        FireDragon('Bartholomew', 200, 1),
     ]
     total_dragons = len(dragons)
     print(f'Welcome to dragon training, {name} \nYou must defeat {total_dragons} dragons.')
     while len(dragons) > 0 and hero.hp > 0:
-        print(f'\n{hero}')
+        print(f'\n{hero} \nLevel: {hero.level}')
         [print(f"{i+1}. Attack {dragon}") for i, dragon in enumerate(dragons)]
         dragonChoice = get_int_range(f'Choose a dragon to attack: ', 1, len(dragons)) - 1
         weaponChoice = get_int_range('\nAttack with:\n1. Sword (2 D6)\n2. Arrow (1 D12)\nEnter weapon: ', 1, 2)
@@ -28,7 +29,9 @@ def main():
             print(hero.special_attack(dragons[dragonChoice]))
 
         if dragons[dragonChoice].hp <= 0:
+            print(f'{hero.name} has slain {dragons[dragonChoice].name}\n')
             dragons.pop(dragonChoice)
+            hero.level += 1
 
         if not dragons: print(f'Congratulations! You have defeated all {total_dragons} dragons, you have passed the trials.'); break
 
