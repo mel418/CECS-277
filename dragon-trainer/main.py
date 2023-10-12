@@ -1,3 +1,6 @@
+# Melody Gatan, Kenton La
+# 10/12/2023
+# Dragon trainer - hero defeats three dragons using inheritance
 from hero import Hero
 from dragon import Dragon
 from fire_dragon import FireDragon
@@ -8,7 +11,7 @@ from random import choice
 def main():
     name = str(input('What is your name, challenger?\n'))
     hero = Hero(name, 50)
-    dragons = [
+    dragons = [ 
         Dragon('Deadly Nadder', 10),
         FireDragon('Gronckle', 15, 3),
         FlyingDragon('Timberjack', 20, 5),
