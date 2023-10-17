@@ -1,6 +1,8 @@
 from basic_door import BasicDoor
 from combo_door import ComboDoor
 from deadbolt_door import DeadboltDoor
+from locked_door import LockedDoor
+from code_door import CodeDoor
 from random import choice
 from check_input import get_int_range
 
@@ -25,7 +27,9 @@ def main():
         ComboDoor(),
         BasicDoor(), 
         DeadboltDoor(),
-
+        LockedDoor(),
+        CodeDoor(),
+        
         ]
         door = choice([door for door in doors])
         open_door(door)
