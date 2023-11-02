@@ -12,5 +12,5 @@ class Enemy(Entity):
         entity.take_damage(damage)  # Use take_damage method to handle damage
         return self.name + ' attacks a ' + entity.name + ' for ' + str(damage) + ' damage.'
 
-monster = Enemy()
-print(monster.name)
+# monster = Enemy()
+# print(monster.name)
