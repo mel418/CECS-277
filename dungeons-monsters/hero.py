@@ -5,10 +5,6 @@ from map import Map  # Import the Map class
 class Hero(Entity):
     def __init__(self, name):
         super().__init__(name, 25)
-        for r in range(len(Map())):
-            for c in range(len(Map()[r])):
-                if Map()[r][c] == 's':
-                    self._loc = [r, c]
         self._loc = [0, 0]
         
 
