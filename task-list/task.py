@@ -7,24 +7,26 @@ class Task:
     '''
     
     def __init__(self, desc, date, time):
-        self.description = desc
-        self.date = date
-        self.time = time
-        
+        self._description = desc
+        self._date = date  # MM/DD/YYYY
+        self._time = time  # HH:MM
+
+    @property
+    def date(self):
+        return self._date
+
     def __str__(self):
-        '''String representation of a task - user facing.'''
-        return self.description + " - Due: " + self.date + " at " + self.time
+        return self._description + " - Due: " + self._date + " at " + self._time
 
     def __repr__(self):
-        '''String representation of a task - file facing'''
-        return self.description + "," + self.date + "," + self.time
-    
+        return self._description + ", " + self._date + ", " + self._time
+
     def __lt__(self, other):
-        month, day, year = self.date.split('/')
-        other_month, other_day, other_year = other.date.split('/')
-        hour, minute = self.time.split(':')
-        other_hour, other_minute = other.time.split(':')
-        if (year, month, day, hour, minute, self.description.lower()) < (other_year, other_month, other_day, other_hour, other_minute, other.description.lower()):
+        month, day, year = self._date.split('/')
+        other_month, other_day, other_year = other._date.split('/')
+        hour, minute = self._time.split(':')
+        other_hour, other_minute = other._time.split(':')
+        if (year, month, day, hour, minute, self._description.lower()) < (other_year, other_month, other_day, other_hour, other_minute, other._description.lower()):
             return True
         return False
     

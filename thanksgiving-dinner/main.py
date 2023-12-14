@@ -35,6 +35,7 @@ def examine_plate(p):
     return False
     
 def main():
+    print(reversed(list(range(1,11))))
     print(
         '- Thanksgiving Dinner -\n'
         'Serve yourself as much food as you like from the buffet, but make sure\n'
